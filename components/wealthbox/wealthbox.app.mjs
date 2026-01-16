@@ -146,5 +146,23 @@ export default {
         ...args,
       });
     },
+    listComments(args = {}) {
+      return this._makeRequest({
+        path: "/comments",
+        ...args,
+      });
+    },
+    listNotes(args = {}) {
+      return this._makeRequest({
+        path: "/notes",
+        ...args,
+      });
+    },
+    listActivityStream(args = {}) {
+      return this._makeRequest({
+        path: "/activity_stream",
+        ...args,
+      });
+    },
   },
 };
