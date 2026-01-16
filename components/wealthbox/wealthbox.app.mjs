@@ -164,25 +164,15 @@ export default {
         ...args,
       });
     },
-    createWebhook(args = {}) {
+    listProjects(args = {}) {
       return this._makeRequest({
-        path: "/webhooks",
-        method: "POST",
+        path: "/projects",
         ...args,
       });
     },
-    deleteWebhook({
-      webhookId, ...args
-    } = {}) {
+    listWorkflows(args = {}) {
       return this._makeRequest({
-        path: `/webhooks/${webhookId}`,
-        method: "DELETE",
-        ...args,
-      });
-    },
-    listWebhooks(args = {}) {
-      return this._makeRequest({
-        path: "/webhooks",
+        path: "/workflows",
         ...args,
       });
     },
