@@ -164,5 +164,27 @@ export default {
         ...args,
       });
     },
+    createWebhook(args = {}) {
+      return this._makeRequest({
+        path: "/webhooks",
+        method: "POST",
+        ...args,
+      });
+    },
+    deleteWebhook({
+      webhookId, ...args
+    } = {}) {
+      return this._makeRequest({
+        path: `/webhooks/${webhookId}`,
+        method: "DELETE",
+        ...args,
+      });
+    },
+    listWebhooks(args = {}) {
+      return this._makeRequest({
+        path: "/webhooks",
+        ...args,
+      });
+    },
   },
 };
